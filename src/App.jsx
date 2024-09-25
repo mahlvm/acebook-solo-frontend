@@ -4,7 +4,7 @@ import CreateAccountPage from './Pages/CreateAccountPage'
 import LoginPage from './Pages/LoginPage'
 import TokenProvider from './providers/tokenProvider'
 import FeedPage from './Pages/FeedPage'
-
+import ProfilePage from './Pages/ProfilePage'
 
 const browserRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -13,6 +13,7 @@ const browserRouter = createBrowserRouter(
       <Route path='/createaccount' element={<CreateAccountPage />}/>
       <Route path='/login' element={<LoginPage />}/>
       <Route path='/feed' element={<FeedPage />}/>
+      <Route path='/profile' element={<ProfilePage />}/>
     </Route>
   )
 )

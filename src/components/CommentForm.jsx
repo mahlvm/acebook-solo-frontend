@@ -23,6 +23,7 @@ const CommentForm = ({ postId }) => {
 
 
     return (
+        <>
         <form onSubmit={sendComment}>
             <input type="text" 
                 placeholder="Enter your comment" 
@@ -30,6 +31,7 @@ const CommentForm = ({ postId }) => {
                 onChange={(event) => setComment(event.target.value)} />
             <button type="submit">Submit</button>
         </form>
+        </>
     )
 }
 

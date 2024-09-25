@@ -1,8 +1,9 @@
-
 import { useEffect, useState, useContext } from "react";
 import tokenContext from '../context/tokenContext';
 import CommentForm from '../components/CommentForm';
 import CommentList from '../components/CommentList';
+import PostLike from "../components/PostLike";
+import PostDelete from "./PostDelete";
 
 
 
@@ -38,6 +39,8 @@ const PostFeed = () => {
                 <div key={post._id}>
                     <h2>{post.message}</h2>
                     {post.image && <img src={post.image} alt="Post" />}
+                    <PostDelete postId={post._id} createdBy={post.createdBy} />
+                    <PostLike postId={post._id} />
                     <CommentForm postId={post._id}/>  
                     <CommentList postId={post._id} />  
                 </div>

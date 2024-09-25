@@ -22,7 +22,12 @@ const LoginPage = () => {
 
         if(response.status === 201) {
             console.log("Login successful");
-            login(data.token);
+            login(data.token, data.userId, data.username, data.email, data.avatar);
+            // console.log(data.username);
+            // console.log(data.email);
+            // console.log(data.avatar);
+            // console.log(data.token);
+            // console.log(data.userId);
             navigate('/feed');
         } else if (response.status === 401) {
             console.log("Invalid credentials");

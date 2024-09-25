@@ -1,6 +1,8 @@
 import { useEffect, useState, useContext } from "react";
 import tokenContext from '../context/tokenContext';
 import { PropTypes } from 'prop-types';
+import CommentLike from "./CommentLike";
+import CommentDelete from "./CommentDelete";
 
 const CommentList = ({postId}) => {
 
@@ -34,6 +36,8 @@ const CommentList = ({postId}) => {
             {comments.map(comment => (
                 <div key={comment._id}>
                     <p>{comment.message}</p>
+                    <CommentDelete postId={comment._id} createdBy={comment.createdBy} />
+                    <CommentLike commentId={comment._id}/>
                 </div>
             ))}
         </div>
@@ -42,6 +46,7 @@ const CommentList = ({postId}) => {
 
 CommentList.propTypes = {
     postId: PropTypes.string.isRequired,
+    
 };
 
 
