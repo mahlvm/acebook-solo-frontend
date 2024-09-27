@@ -17,16 +17,13 @@ const TokenProvider = ({children}) => {
         setEmail(email);
         setAvatar(avatar);
         
-        
         localStorage.setItem('token', token);
         localStorage.setItem('userId', userId);
         localStorage.setItem('username', username);
         localStorage.setItem('email', email);
         localStorage.setItem('avatar', avatar);
 
-
-
-
+        console.log(token, userId, username, email, avatar);
     };
 
     const logout = () => {
@@ -43,8 +40,19 @@ const TokenProvider = ({children}) => {
         localStorage.removeItem('avatar'); 
     };
 
+
+    const updateProfile = (newUserName, newEmail) => {
+        setUsername(newUserName);
+        setEmail(newEmail);
+
+        localStorage.setItem('username', newUserName);
+        localStorage.setItem('email', newEmail);
+        console.log("Updating profile with:", newUserName, newEmail);
+
+    };
+
     return(
-        <tokenContext.Provider value={{ token, userId, username, email, avatar, login, logout }}>
+        <tokenContext.Provider value={{ token, userId, username, email, avatar, login, logout, updateProfile, setUsername, setEmail }}>
             {children}
         </tokenContext.Provider>
     );

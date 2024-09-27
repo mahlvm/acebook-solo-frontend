@@ -5,18 +5,25 @@ const CreateAccountPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
+    const [avatar, setAvatar] = useState(null);
     const navigate = useNavigate();
 
     const fetchCreateAccount = async (event) => {
         event.preventDefault(); 
 
+        // Cria uma nova instância de FormData
+        const formData = new FormData();
+        formData.append('username', username);
+        formData.append('password', password);
+        formData.append('email', email);
+        if (avatar) {
+            formData.append('profilePicture', avatar); // Nome deve corresponder ao que o multer espera
+        }
+
         try {
             const response = await fetch('http://127.0.0.1:8080/users', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username, password, email })
+                body: formData 
             });
             const data = await response.json();
             console.log(data); 
@@ -66,6 +73,14 @@ const CreateAccountPage = () => {
                     name="email"
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
+                />
+
+                <input
+                    type="file"
+                    id="avatar"
+                    name="avatar"
+                    accept="image/*" // Aceita apenas arquivos de imagem
+                    onChange={(event) => setAvatar(event.target.files[0])} // Armazena o arquivo selecionado
                 />
 
                 <button type="submit">Create Account</button>
