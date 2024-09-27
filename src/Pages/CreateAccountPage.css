@@ -1,0 +1,36 @@
+.accountContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.box-image {
+    flex: 1.5;
+    display: flex;
+    justify-content: right;
+    align-items: center; 
+    height: 100%; /* Garante que o container tenha 100% da altura disponível */
+}
+
+.box-image img {
+    height: 100%; 
+    width: auto; 
+    object-fit: cover;
+}
+
+.form-account {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    background-color: #F7F7F8;
+    height: 100%; /* Mantém o form com 100% da altura */
+}
+
+.title-account {
+    padding-top: 10rem;
+}

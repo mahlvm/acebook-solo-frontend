@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './CreateAccountPage.css';
+import girlsImage from '../assets/girl.svg';
+
+
 
 const CreateAccountPage = () => {
     const [username, setUsername] = useState('');
@@ -46,46 +50,69 @@ const CreateAccountPage = () => {
 
     return (
         <div>
-            <h1>Create Account</h1>
-            <form onSubmit={fetchCreateAccount}>
-                <label htmlFor="username">Username:</label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    value={username}
-                    onChange={(event) => setUsername(event.target.value)}
-                />
+        <div className="accountContainer">
+            
 
-                <label htmlFor="password">Password:</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                />
+            <div className='form-account'>
 
-                <label htmlFor="email">Email:</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={email}
-                    onChange={(event) => setEmail(event.target.value)}
-                />
+                <div className='title-account'>
+                    <h1>Create Account</h1>
+                </div>
+                <form onSubmit={fetchCreateAccount}>
+                    <div className="form-group">
+                        <label htmlFor="username">Username:</label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            value={username}
+                            onChange={(event) => setUsername(event.target.value)}
+                        />
+                    </div>
+    
+                    <div className="form-group">
+                        <label htmlFor="password">Password:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            value={password}
+                            onChange={(event) => setPassword(event.target.value)}
+                        />
+                    </div>
+    
+                    <div className="form-group">
+                        <label htmlFor="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={email}
+                            onChange={(event) => setEmail(event.target.value)}
+                        />
+                    </div>
+    
+                    <div className="form-group">
+                        <input
+                            type="file"
+                            id="avatar"
+                            name="avatar"
+                            accept="image/*"
+                            onChange={(event) => setAvatar(event.target.files[0])}
+                        />
+                    </div>
+    
+                    <button type="submit">Create Account</button>
+                </form>
+            </div>
 
-                <input
-                    type="file"
-                    id="avatar"
-                    name="avatar"
-                    accept="image/*" // Aceita apenas arquivos de imagem
-                    onChange={(event) => setAvatar(event.target.files[0])} // Armazena o arquivo selecionado
-                />
+            <div className='box-image'>
+                <img src={girlsImage} alt="Description of the image" />
+            </div>
 
-                <button type="submit">Create Account</button>
-            </form>
         </div>
+    </div>
+    
     );
 };
 
