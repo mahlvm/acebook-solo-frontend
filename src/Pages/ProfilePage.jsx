@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import tokenContext from '../context/tokenContext';
 import ProfileUpdate from '../components/ProfileUpdate';
+import PostByUser from '../components/PostByUser';
 
 const ProfilePage = () => {
     const { username, email, avatar } = useContext(tokenContext); 
@@ -23,6 +24,9 @@ const ProfilePage = () => {
                 style={{ width: '150px', height: '150px' }} // Ajuste o tamanho para ser visível
             />
             <ProfileUpdate />
+
+            <PostByUser/>
+
         </div>
     );
 };
