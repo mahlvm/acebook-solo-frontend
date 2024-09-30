@@ -1,8 +1,8 @@
 import { PropTypes } from 'prop-types';
 import { useState } from 'react';
-import tokenContext from "../context/tokenContext"
+import tokenContext from "../context/tokenContext";
 
-const TokenProvider = ({children}) => {
+const TokenProvider = ({ children }) => {
     const [token, setToken] = useState(() => localStorage.getItem('token') || null);
     const [userId, setUserId] = useState(() => localStorage.getItem('userId') || null);
     const [username, setUsername] = useState(() => localStorage.getItem('username') || null);
@@ -16,15 +16,16 @@ const TokenProvider = ({children}) => {
         setUsername(username);
         setEmail(email);
         setAvatar(avatar);
-        
+
         localStorage.setItem('token', token);
         localStorage.setItem('userId', userId);
         localStorage.setItem('username', username);
         localStorage.setItem('email', email);
         localStorage.setItem('avatar', avatar);
 
-        console.log(token, userId, username, email, avatar);
     };
+
+
 
     const logout = () => {
         setToken(null);
@@ -32,14 +33,14 @@ const TokenProvider = ({children}) => {
         setUsername(null);
         setEmail(null);
         setAvatar(null);
-        
+
         localStorage.removeItem('token');
         localStorage.removeItem('userId');
         localStorage.removeItem('username');
         localStorage.removeItem('email');
         localStorage.removeItem('avatar'); 
+        localStorage.removeItem('friends');
     };
-
 
     const updateProfile = (newUserName, newEmail) => {
         setUsername(newUserName);
@@ -48,10 +49,11 @@ const TokenProvider = ({children}) => {
         localStorage.setItem('username', newUserName);
         localStorage.setItem('email', newEmail);
         console.log("Updating profile with:", newUserName, newEmail);
-
     };
 
-    return(
+
+
+    return (
         <tokenContext.Provider value={{ token, userId, username, email, avatar, login, logout, updateProfile, setUsername, setEmail }}>
             {children}
         </tokenContext.Provider>
@@ -59,9 +61,7 @@ const TokenProvider = ({children}) => {
 };
 
 TokenProvider.propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
 }
 
 export default TokenProvider;
-
-

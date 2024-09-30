@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import tokenContext from '../context/tokenContext';
 import ProfileUpdate from '../components/ProfileUpdate';
 import PostByUser from '../components/PostByUser';
+import FriendsByUser from '../components/FriendsByUser';
 
 const ProfilePage = () => {
     const { username, email, avatar } = useContext(tokenContext); 
@@ -26,6 +27,10 @@ const ProfilePage = () => {
             <ProfileUpdate />
 
             <PostByUser/>
+
+            <div>
+                <FriendsByUser />
+            </div>
 
         </div>
     );

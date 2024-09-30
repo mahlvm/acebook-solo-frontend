@@ -5,6 +5,13 @@ import LoginPage from './Pages/LoginPage'
 import TokenProvider from './providers/tokenProvider'
 import FeedPage from './Pages/FeedPage'
 import ProfilePage from './Pages/ProfilePage'
+import "@fontsource/quicksand"; // Importa a fonte padrão
+import "@fontsource/quicksand/400.css"; // Peso normal (400)
+import "@fontsource/quicksand/700.css"; // Peso 700
+import UsersPage from './components/NewFriends'
+
+
+
 
 const browserRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +21,7 @@ const browserRouter = createBrowserRouter(
       <Route path='/login' element={<LoginPage />}/>
       <Route path='/feed' element={<FeedPage />}/>
       <Route path='/profile' element={<ProfilePage />}/>
+      <Route path='/users' element={<UsersPage />}/>
     </Route>
   )
 )

@@ -4,6 +4,7 @@ import CommentForm from '../components/CommentForm';
 import CommentList from '../components/CommentList';
 import PostLike from "../components/PostLike";
 import PostDelete from "./PostDelete";
+import './PostByUser.css';
 
 const PostByUser = () => {
     const [postsByUser, setPostsByUser] = useState([]);
@@ -35,18 +36,34 @@ const PostByUser = () => {
 
     return (
         <div>
-            <h1>Post Feed</h1>
-            {postsByUser.map(postByUser => (
-                <div key={postByUser._id}>
+    <h1>Post Feed</h1>
+    <div className="postsByUser-container">
+        {postsByUser.map(postByUser => (
+            <div className="postByUser" key={postByUser._id}>
+                <div className="img-message-postByUser">
+                    <img src={`http://127.0.0.1:8080${postByUser.avatar}`} alt="Avatar" />
+                    <h1>{postByUser.username}</h1>
+                </div>
+                
+                <div className="postByUser-content">
                     <h2>{postByUser.message}</h2>
                     {postByUser.image && <img src={postByUser.image} alt="Post" />}
+                </div>
+                
+                <div className="postByUser-likes">
                     <PostDelete postId={postByUser._id} createdBy={postByUser.createdBy} />
                     <PostLike postId={postByUser._id} />
-                    <CommentForm postId={postByUser._id} />
-                    <CommentList postId={postByUser._id} />
                 </div>
-            ))}
-        </div>
+
+                <div className="postByUser-icon">
+                    <CommentForm postId={postByUser._id} />  
+                    <CommentList postId={postByUser._id} />  
+                </div>
+            </div>
+        ))}
+    </div>
+</div>
+
     );
 };
 

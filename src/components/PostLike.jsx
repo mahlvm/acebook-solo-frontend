@@ -2,6 +2,8 @@ import { useState, useContext } from "react";
 import tokenContext from '../context/tokenContext';
 import { PropTypes } from 'prop-types';
 
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 const PostLike = ({postId}) => {
 
@@ -29,6 +31,7 @@ const PostLike = ({postId}) => {
             console.error("Failed to like post:", response.status);
         }
         // fetchTotalLikes();
+
     }
 
     // const fetchTotalLikes = async () => {
@@ -49,14 +52,15 @@ const PostLike = ({postId}) => {
     // }
 
 
+
     
     return (
     <div>
         <p  onClick={fetchLikePost} >
         {isLiked ? (
-            <p>❤️</p>
+            <i className="bi bi-heart-fill" style={{ cursor: 'pointer', fontSize: '15px', color: '#A303A0' }}></i>
         ) : (
-            <p>🤍</p>
+            <i className="bi bi-heart" style={{ cursor: 'pointer', fontSize: '15px', color: '#A303A0' }}></i>
         )}
         </p>
 

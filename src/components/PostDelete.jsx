@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import tokenContext from '../context/tokenContext';
 import { PropTypes } from 'prop-types';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 const PostDelete = ({ postId, createdBy }) => {
     const { token, userId } = useContext(tokenContext);
@@ -34,10 +36,13 @@ const PostDelete = ({ postId, createdBy }) => {
 
     return (
         <div>
-            {isUser && 
-                <p onClick={fetchPostDele}>🗑️</p>
-            }
-        </div>
+    <div className="post-delete">
+        {isUser && (
+            <i className="bi bi-trash" onClick={fetchPostDele} style={{ cursor: 'pointer', fontSize: '15px', color: '#A303A0' }}></i>
+        )}
+    </div>
+</div>
+
     );
 };
 

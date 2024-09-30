@@ -1,0 +1,105 @@
+.login-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Formulário fica na esquerda, imagem vai para a direita */
+    width: 100vw;
+    height: 100vh; /* O container ocupa a altura total do viewport */
+    overflow: hidden; /* Evita que o conteúdo exceda o tamanho do viewport */
+}
+
+.login-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Coloca a imagem à direita */
+    align-items: center;
+    background-color: #F7F7F8;
+    height: 100vh; /* A altura da imagem será igual ao viewport */
+}
+
+.login-image img {
+    max-height: 100vh; /* Garante que a imagem não exceda a altura do viewport */
+    max-width: 100vw; /* Garante que a imagem não exceda a largura do viewport */
+    object-fit: contain; /* Mostra a imagem inteira, adaptando-a ao espaço disponível */
+}
+
+.login-form {
+    flex: 1;
+    height: 100vh; /* O formulário também ocupa a altura total do viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F7F8;
+}
+
+.login-form {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #F7F7F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-login{
+    padding-left: 20rem;
+}
+
+.logo-login h1 {
+    font-size: 5rem;
+    color: #bd02ba;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.title-login h2 {
+    font-size: 2.5rem;
+    color: #490057;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    color: #490057;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+input[type="email"],
+input[type="password"] {
+    border: none;
+    border-bottom: 2px solid #490057;
+    outline: none;
+    background: transparent;
+    font-size: 1.3rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    color: #490057;
+}
+
+.button-login {
+    display: flex;
+    justify-content: left;
+}
+
+.button-login button {
+    background-color: #FBB03B;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    width: 12rem;
+    height: 4rem;
+    cursor: pointer;
+}
+
+.button-login button:hover {
+    background-color: #fbbd5a;
+}

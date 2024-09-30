@@ -1,0 +1,16 @@
+.post-form{
+    width: 100%; 
+    margin-bottom: 2rem;
+    
+}
+
+.post-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 20rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+}

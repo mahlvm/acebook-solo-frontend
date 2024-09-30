@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react'
 import tokenContext from '../context/tokenContext';
 import { useNavigate } from 'react-router-dom';
+import "./PostForm.css";
 
 const PostForm = () => {
     const [message, setMessage] = useState('');
@@ -30,14 +31,21 @@ const PostForm = () => {
     }
 
     return (
-        <form onSubmit={fetchPost}>
-            <textarea placeholder="Description" 
-                id="message" 
-                value={message} 
-                onChange={(event) => setMessage(event.target.value)}>
-            </textarea>
-            <button type='submite'>Post</button>
-        </form>
+        <>
+        <div className='post-form'>
+            
+            <form onSubmit={fetchPost}>
+                <textarea placeholder="Description" 
+                    id="message" 
+                    value={message} 
+                    onChange={(event) => setMessage(event.target.value)}>
+                </textarea>
+                <button type='submite'>Post</button>
+            </form>
+
+        </div>
+
+        </>
     )
 };
 

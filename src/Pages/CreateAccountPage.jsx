@@ -49,69 +49,76 @@ const CreateAccountPage = () => {
     };
 
     return (
-        <div>
-        <div className="accountContainer">
-            
-
-            <div className='form-account'>
-
-                <div className='title-account'>
-                    <h1>Create Account</h1>
-                </div>
-                <form onSubmit={fetchCreateAccount}>
-                    <div className="form-group">
-                        <label htmlFor="username">Username:</label>
-                        <input
-                            type="text"
-                            id="username"
-                            name="username"
-                            value={username}
-                            onChange={(event) => setUsername(event.target.value)}
-                        />
-                    </div>
-    
-                    <div className="form-group">
-                        <label htmlFor="password">Password:</label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={password}
-                            onChange={(event) => setPassword(event.target.value)}
-                        />
-                    </div>
-    
-                    <div className="form-group">
-                        <label htmlFor="email">Email:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={email}
-                            onChange={(event) => setEmail(event.target.value)}
-                        />
-                    </div>
-    
-                    <div className="form-group">
-                        <input
-                            type="file"
-                            id="avatar"
-                            name="avatar"
-                            accept="image/*"
-                            onChange={(event) => setAvatar(event.target.files[0])}
-                        />
-                    </div>
-    
-                    <button type="submit">Create Account</button>
-                </form>
-            </div>
-
-            <div className='box-image'>
-                <img src={girlsImage} alt="Description of the image" />
-            </div>
-
+    <div className='accountContainer'>
+    <div className='box-form'>
+        <div className='box-form-content'>
+        <div className='logo-account'>
+            <h1>ACEBOOK</h1>
         </div>
+
+        <div className='title-account'>
+            <h2>Create Account</h2>
+        </div>
+
+        <form className='form-account' onSubmit={fetchCreateAccount}>
+            <div className="form-group">
+                <label htmlFor="username">Username:</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    value={username}
+                    onChange={(event) => setUsername(event.target.value)}
+                />
+
+            </div><div className="form-group">
+                <label htmlFor="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                />
+            </div>
+
+
+            <div className="form-group">
+                <label htmlFor="password">Password:</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                />
+            </div>
+
+        
+
+            <div className="form-group">
+                <input
+                    type="file"
+                    id="avatar"
+                    name="avatar"
+                    accept="image/*"
+                    onChange={(event) => setAvatar(event.target.files[0])}
+                />
+    
+            </div>
+
+            <div className='button-account'>
+                <button className="button-newUser" type="submit">Create Account</button>
+            </div>
+        </form>
     </div>
+    </div>
+
+    <div className='box-image'>
+        <img src={girlsImage} alt="Description of the image" />
+    </div>
+</div>
+
     
     );
 };

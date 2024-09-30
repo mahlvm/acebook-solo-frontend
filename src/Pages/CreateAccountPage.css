@@ -1,36 +1,101 @@
-.accountContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-}
+    .accountContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        max-width: 100vh;
+        max-width: 100vw;
+    }
 
-.box-image {
-    flex: 1.5;
-    display: flex;
-    justify-content: right;
-    align-items: center; 
-    height: 100%; /* Garante que o container tenha 100% da altura disponível */
-}
+    .box-image {
+        flex: 1; 
+        height: 100%; 
+        width: 100%; 
+        background-color: #F7F7F8; 
+        display: flex; 
+    }
 
-.box-image img {
-    height: 100%; 
-    width: auto; 
-    object-fit: cover;
-}
+    .box-image img {
+        height: 100%; 
+        width: 100%; 
+        object-fit: cover;
+    }
 
-.form-account {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: top;
-    background-color: #F7F7F8;
-    height: 100%; /* Mantém o form com 100% da altura */
-}
 
-.title-account {
-    padding-top: 10rem;
-}
+
+    .box-form{
+        flex:1; 
+        height: 100%; 
+        width: 100%; 
+        background-color: #F7F7F8;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box-form-content{
+        padding-left: 20rem;
+    }
+
+    .logo-account h1{
+        font-size: 5rem;
+        color: #bd02ba;
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    .title-account h2{
+        font-size: 2.5rem;
+        color: #490057; 
+    }
+
+    .form-account {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+        justify-content: center; 
+    }
+
+    .form-group {
+        width: 100%; 
+        margin-bottom: 2rem ; 
+    }
+
+    .form-group label {
+        color: #490057;
+        margin-bottom: 0.5rem; 
+        font-size: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        border: none; 
+        border-bottom: 2px solid #490057; 
+        outline: none; 
+        background: transparent; 
+        font-size: 1.3rem; 
+        width: 100%; 
+        padding: 0.5rem 0; 
+        color: #490057;
+    }
+
+
+    .button-newUser{
+        background-color: #A303A0;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        justify-content: center;
+        font-size: 1.2rem;
+        width: 12rem;
+        height: 4rem;
+        cursor: pointer;
+    }
+
+    .button-newUser:hover {
+        background-color: #bd02ba;
+    }
