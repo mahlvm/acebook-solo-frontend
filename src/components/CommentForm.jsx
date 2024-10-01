@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react'
 import tokenContext from '../context/tokenContext';
 import { PropTypes } from 'prop-types';
+import './CommentForm.css';
 
 const CommentForm = ({ postId }) => {
     const [comment, setComment] = useState('');
@@ -24,13 +25,20 @@ const CommentForm = ({ postId }) => {
 
     return (
         <>
-        <form onSubmit={sendComment}>
-            <input type="text" 
-                placeholder="Enter your comment" 
-                value={comment} 
-                onChange={(event) => setComment(event.target.value)} />
-            <button type="submit">Submit</button>
-        </form>
+        <div className='comment-form-box'>
+            <form className="comment-form" onSubmit={sendComment}>
+                <input 
+                    className='comment-input'
+                    type="text" 
+                    placeholder="What do you think?" 
+                    value={comment} 
+                    onChange={(event) => setComment(event.target.value)} />
+                <div className='comment-button-div'>
+                    <button type="submit"><i className="bi bi-arrow-right-square-fill"></i></button>
+                </div>
+                
+            </form>
+        </div>
         </>
     )
 }

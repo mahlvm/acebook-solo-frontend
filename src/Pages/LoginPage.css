@@ -72,8 +72,8 @@
     font-size: 1.5rem;
 }
 
-input[type="email"],
-input[type="password"] {
+.form-group input[type="email"],
+.form-group input[type="password"] {
     border: none;
     border-bottom: 2px solid #490057;
     outline: none;

@@ -44,10 +44,12 @@ const PostFeed = () => {
 
 
     return (
-        <div>
-    <h1>Post Feed</h1>
-    <div className="posts-container">
-        {posts.map(post => (
+    <div>
+        <div className="post-feed-header">
+            <h1>Post Feed</h1>
+        </div>
+        <div className="posts-container">
+            {posts.map(post => (
 
             <div className="post" key={post._id}>
                 
@@ -65,7 +67,7 @@ const PostFeed = () => {
                 <PostLike postId={post._id} />
             
 
-                <div className="post-icon">
+                <div className="post-comments">
                     <CommentForm postId={post._id}/>  
                     <CommentList postId={post._id} />  
                 </div>

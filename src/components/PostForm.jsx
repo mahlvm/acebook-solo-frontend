@@ -5,7 +5,7 @@ import "./PostForm.css";
 
 const PostForm = () => {
     const [message, setMessage] = useState('');
-    const { token } = useContext(tokenContext);
+    const { token, avatar } = useContext(tokenContext);
     const navigate = useNavigate();
 
     const fetchPost = async () => {
@@ -32,16 +32,27 @@ const PostForm = () => {
 
     return (
         <>
-        <div className='post-form'>
+        <div className='post-container'>
             
-            <form onSubmit={fetchPost}>
-                <textarea placeholder="Description" 
-                    id="message" 
-                    value={message} 
-                    onChange={(event) => setMessage(event.target.value)}>
-                </textarea>
-                <button type='submite'>Post</button>
+            <div className='post-form-div'>
+                <form className='post-form'onSubmit={fetchPost}>
+                <div className='post-avatar-textarea'>
+                    <img src={`http://127.0.0.1:8080${avatar}`} alt="Avatar" />
+                    <textarea placeholder="What are you thinking?" 
+                        className='post-textarea'
+                        id="message" 
+                        value={message} 
+                        onChange={(event) => setMessage(event.target.value)}>
+                    </textarea>
+                </div>
+                <div className='post-button-div'>
+                    <button className="post-button" type='submite'>Send</button>
+                </div>
+                
             </form>
+
+            </div>
+            
 
         </div>
 

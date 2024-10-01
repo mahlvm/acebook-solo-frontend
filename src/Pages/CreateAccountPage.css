@@ -70,9 +70,9 @@
         font-size: 1.5rem;
     }
 
-    input[type="text"],
-    input[type="password"],
-    input[type="email"] {
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group input[type="email"] {
         border: none; 
         border-bottom: 2px solid #490057; 
         outline: none; 

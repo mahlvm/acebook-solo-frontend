@@ -2,8 +2,9 @@
 
 .feed-container {
     display: flex;
-    min-height: 100vh; /* Permite que o container cresça conforme o conteúdo */
+    min-height: 100vh; 
     width: 100vw;
+    padding-top: 5rem;
 }
 
 .box-left {
@@ -11,8 +12,8 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px; /* Largura da navbar */
-    background-color: #490057; /* Cor de fundo da navbar */
+    width: 250px; 
+    background-color: #490057; 
     display: flex;
     flex-direction: column;
     align-items: top;
@@ -20,10 +21,29 @@
     padding-top: 2rem;
 }
 
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-left h1{
+    font-size: 5rem;
+    color: #FBB03B;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding-top: 1rem;
+}
+
 .navbar ul {
     list-style-type: none;
     padding: 0;
 }
+
+
 
 .navbar li {
     margin: 1rem 0;
@@ -35,15 +55,35 @@
     font-size: 1.5rem;
 }
 
+.navbar a:hover {
+    color: #FBB03B;
+    cursor: pointer;
+}
+
+
+.li-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    padding-right: 10rem;
+}
+
+.li-icon i{
+    color: white;
+    font-size: 2rem;
+}
+
 .box-right {
-    margin-left: 250px; /* Espaço deixado para a barra de navegação fixa */
-    min-height: 100vh; /* Permite que a altura cresça conforme necessário */
-    width: calc(100vw - 250px); /* Calcula a largura com base na navegação fixa */
-    overflow-y: auto; /* Adiciona rolagem vertical à área de conteúdo */
+    margin-left: 250px; 
+    min-height: 100vh; 
+    width: calc(100vw - 250px); 
+    overflow-y: auto; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    justify-content: flex-start; /* O conteúdo começa no topo */
+    align-items: center; 
+    justify-content: flex-start; 
     padding: 2rem;
 }
 
@@ -53,13 +93,3 @@
     
 }
 
-/* .post-form-feed {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    height: 20rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px; 
-} */
