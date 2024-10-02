@@ -35,9 +35,9 @@ const CommentLike = ({commentId}) => {
     <div>
         <p  onClick={fetchLikeComment} >
         {isLikedComment ? (
-            <p>❤️</p>
+            <i className="bi bi-heart-fill" style={{ cursor: 'pointer', fontSize: '10px', color: '#A303A0' }}></i>
         ) : (
-            <p>🤍</p>
+            <i className="bi bi-heart" style={{ cursor: 'pointer', fontSize: '10px', color: '#A303A0' }}></i>
         )}
         </p>
     </div>

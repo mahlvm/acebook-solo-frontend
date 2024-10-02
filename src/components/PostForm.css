@@ -34,7 +34,20 @@
     justify-content: center;
     width: 90%;
     gap: 2rem;
+}
 
+.post-avatar-textarea textarea {
+    font-family: 'Quicksand', sans-serif; 
+    font-size: 14px; 
+    color: #490057;
+}
+
+
+
+.post-avatar-textarea textarea::placeholder {
+    font-family: 'Quicksand', sans-serif; 
+    font-size: 14px; 
+    color: #888;
 }
 
 .post-avatar-textarea img {

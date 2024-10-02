@@ -1,0 +1,164 @@
+
+.profile-container-profile {
+    display: flex;
+    min-height: 100vh; 
+    width: 100vw;
+}
+
+.box-left-profile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px; 
+    background-color: #490057; 
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: flex-start;
+    padding-top: 2rem;
+}
+
+.navbar-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-left-profile h1{
+    font-size: 5rem;
+    color: #FBB03B;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding-top: 1rem;
+}
+
+.navbar-profile ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+.navbar-profile li {
+    margin: 1rem 0;
+}
+
+.navbar-profile a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar-profile a:hover {
+    color: #FBB03B;
+    cursor: pointer;
+}
+
+
+.li-icon-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    padding-right: 10rem;
+}
+
+.li-icon-profile i{
+    color: white;
+    font-size: 2rem;
+}
+
+.box-right-profile {
+    margin-left: 250px; 
+    min-height: 100vh; 
+    width: calc(100vw - 250px); 
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 2rem;
+    margin-top: 0;
+    padding: 0;
+}
+
+.capa {
+    width: 100%; 
+    position: relative;
+
+}
+
+.avatar {
+    position: absolute; 
+    bottom: -80px; 
+    left: 10%; 
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    border: 8px solid #490057; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.profile-user{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: top;
+    padding-left: 63rem;
+}
+
+.profile-data{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-update{
+    margin-left: 10rem;
+}
+
+.profile-username {
+    font-size: 5rem;
+    color: #490057;
+    font-weight: 900;
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.profile-email-div i{
+    font-size: 1.5rem;
+    color: #490057;
+}
+
+.profile-email-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.profile-email {
+    font-size: 2rem;
+    color: #490057;
+    font-weight: 100;
+    margin: 0;
+    padding-left: 0.5rem;
+    
+}
+
+.feed-profile-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+}

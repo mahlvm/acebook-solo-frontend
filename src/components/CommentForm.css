@@ -5,6 +5,7 @@
         justify-content: center;
         background-color: white;
         width: 100%;
+        padding-bottom: 2rem;
         /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
 
@@ -24,6 +25,16 @@
     border: none;
     outline: none; 
     resize: none;
+    font-family: 'Quicksand', sans-serif; 
+    font-size: 10px; 
+    color: #490057;
+    width: 100%;
+}
+
+.comment-input::placeholder {
+    font-family: 'Quicksand', sans-serif; 
+    font-size: 10px; 
+    color: #888;
 }
 
 .comment-button-div button {

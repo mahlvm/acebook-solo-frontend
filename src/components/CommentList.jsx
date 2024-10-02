@@ -38,7 +38,7 @@ const CommentList = ({postId}) => {
             {comments.map(comment => (
                 <div className="comment-list-each"key={comment._id}>
                     <div className="comment-owner">
-                        <img src={`http://127.0.0.1:8080${comment.avatar}`} alt="Avatar" style={{ width: '30px', height: '30px', borderRadius: '50%' }}/>
+                        <img src={`http://127.0.0.1:8080${comment.avatar}`} alt="Avatar"/>
                         <p>{comment.username} </p>
                     </div>
                     <div className="comment-message">

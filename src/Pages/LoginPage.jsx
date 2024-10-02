@@ -79,7 +79,7 @@ const LoginPage = () => {
             </div>
 
             <div className='login-image'>
-                <img src={boyImage} alt="Description of the image" />
+                <img src={boyImage} alt="boy login" />
             </div>
         </div>
     )

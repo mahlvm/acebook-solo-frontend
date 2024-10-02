@@ -35,34 +35,40 @@ const PostByUser = () => {
     }, [token, userId]);
 
     return (
-        <div>
-    <h1>Post Feed</h1>
-    <div className="postsByUser-container">
-        {postsByUser.map(postByUser => (
-            <div className="postByUser" key={postByUser._id}>
-                <div className="img-message-postByUser">
-                    <img src={`http://127.0.0.1:8080${postByUser.avatar}`} alt="Avatar" />
-                    <h1>{postByUser.username}</h1>
-                </div>
-                
-                <div className="postByUser-content">
-                    <h2>{postByUser.message}</h2>
-                    {postByUser.image && <img src={postByUser.image} alt="Post" />}
-                </div>
-                
-                <div className="postByUser-likes">
-                    <PostDelete postId={postByUser._id} createdBy={postByUser.createdBy} />
-                    <PostLike postId={postByUser._id} />
-                </div>
+    <div>
 
-                <div className="postByUser-icon">
-                    <CommentForm postId={postByUser._id} />  
-                    <CommentList postId={postByUser._id} />  
+        <div className="post-feed-header">
+            <h1>Post Feed</h1>
+        </div>
+        <div className="postsByUser-container">
+            {postsByUser.map(postByUser => (
+                <div className="postByUser" key={postByUser._id}>
+                    
+                    <div className="img-message-postByUser">
+                        <img src={`http://127.0.0.1:8080${postByUser.avatar}`} alt="Avatar" />
+                        <h1>{postByUser.username}</h1>
+                    </div>
+                    
+                    <div className="postByUser-content">
+                        <h2>{postByUser.message}</h2>
+                        {postByUser.image && <img src={postByUser.image} alt="Post" />}
+                    </div>
+    
+                    <div className="postByUser-likes">
+                        <PostDelete postId={postByUser._id} createdBy={postByUser.createdBy} />
+                        <PostLike postId={postByUser._id} />
+                    </div>
+    
+                    <div className="postByUser-icon">
+                        <CommentForm postId={postByUser._id} />  
+                        <CommentList postId={postByUser._id} />  
+                    </div>
                 </div>
-            </div>
-        ))}
+            ))}
+
+        </div>
     </div>
-</div>
+    
 
     );
 };

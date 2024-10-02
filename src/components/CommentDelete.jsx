@@ -35,7 +35,7 @@ const CommentDelete = ({ postId, createdBy }) => {
     return (
         <div>
             {isUser && 
-                <p onClick={fetchCommentDele}>🗑️</p>
+                <i className="bi bi-trash" onClick={fetchCommentDele} style={{ cursor: 'pointer', fontSize: '10px', color: '#A303A0' }}></i>
             }
         </div>
     );
