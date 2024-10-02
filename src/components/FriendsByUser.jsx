@@ -2,6 +2,7 @@
 import { useState, useContext, useEffect } from 'react'
 import tokenContext from '../context/tokenContext'
 import NewFriends from './NewFriends';
+import './FriendsByUser.css'
 
 const FriendsByUser = () => {
     const [friendsByUser, setFriendsByUser] = useState([]);
@@ -36,15 +37,18 @@ const FriendsByUser = () => {
 
     return (
         <div>
-            <h1>Friends List</h1>
-            <div>
-                {friendsByUser.map(friend => (
-                    <div key={friend._id}>  
-                    <img src={`http://127.0.0.1:8080${friend.avatar}`} alt={friend.username} style={{ width: '100px', height: '100px' }} />
-                    <p>{friend.username}</p>
+            <div className='friends-box'>
+                <h1>Friends List</h1>
+                <div className="friends-grid">
+                    {friendsByUser.map(friend => (
+                        <div className="friend-card" key={friend._id}>  
+                            <img src={`http://127.0.0.1:8080${friend.avatar}`} alt={friend.username} />
+                            <p>{friend.username}</p>
+                        </div>
+                    ))}
                 </div>
-                ))}
             </div>
+            
             <div>
                 <h2>Find New Friends</h2>
                 <NewFriends arrayFriendsId={arrayFriendsId} />

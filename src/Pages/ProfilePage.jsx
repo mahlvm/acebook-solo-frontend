@@ -78,6 +78,7 @@ const ProfilePage = () => {
                             <FriendsByUser />
                         </div>
                         <div className='feed-profile-posts'>
+                            post
                             <PostByUser/>
                         </div>
                     </div>
