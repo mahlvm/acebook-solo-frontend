@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useContext } from "react";
 import tokenContext from '../context/tokenContext';
+import './ProfileUpdate.css';
 
 const ProfileUpdate = () => {
     const [openUpdate, setOpenUpdate] = useState(false);
@@ -45,37 +46,54 @@ const ProfileUpdate = () => {
 
     return (
         <div>
-            <button type="button" onClick={() => setOpenUpdate(!openUpdate)}>Update</button>
+            <div  className='update-form'>
+            <i onClick={() => setOpenUpdate(!openUpdate)} className="bi bi-pencil-square"></i>
             {openUpdate && (
-                <div>
+                <div className='update-inputs'>
                     <form onSubmit={fetchProfileUpdate}>
+                        <div className='input-update'>
                         <input
                             type="text"
-                            placeholder="Username"
+                            placeholder="New Username"
                             value={newUsername}
                             onChange={(event) => setNewUsername(event.target.value)}
                         />
+                        </div>
+                        <div className='input-update'>
                         <input
                             type="email"
-                            placeholder="Email"
+                            placeholder="New Email"
                             value={newEmail}
                             onChange={(event) => setNewEmail(event.target.value)}
                         />
+                        </div>
+                        <div className='input-update'>
                         <input
                             type="password"
-                            placeholder="Password"
+                            placeholder="New Password"
                             value={newPassword}
                             onChange={(event) => setNewPassword(event.target.value)}
                         />
+                        </div>
+
+                        <div className='input-update'>
                         <input
                             type="file"
-                            onChange={(event) => setProfilePicture(event.target.files[0])} // Captura a imagem
+                            onChange={(event) => setProfilePicture(event.target.files[0])} 
                         />
+                        </div>
+
+                        
+
+                        <div className='input-update'>
+                        <p>Your new information will show after new login</p>
                         <button type="submit">Update</button>
+                        </div>
                     </form>
-                    <p>Your new information will show afte new login</p>
+                    
                 </div>
             )}
+            </div>
         </div>
     );
 }

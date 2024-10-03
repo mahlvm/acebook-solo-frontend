@@ -37,6 +37,7 @@ const FriendsByUser = () => {
 
     return (
         <div>
+            <div className='friend-container'>
             <div className='friends-box'>
                 <h1>Friends List</h1>
                 <div className="friends-grid">
@@ -50,8 +51,8 @@ const FriendsByUser = () => {
             </div>
             
             <div>
-                <h2>Find New Friends</h2>
                 <NewFriends arrayFriendsId={arrayFriendsId} />
+            </div>
             </div>
         </div>
     );  

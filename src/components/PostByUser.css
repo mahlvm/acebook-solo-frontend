@@ -1,3 +1,7 @@
+.postByUser-div {
+    width: 100%; 
+}
+
 
 .post-feed-header {
     display: flex;
@@ -6,23 +10,22 @@
     align-items: start; 
     justify-content: center;
     padding: 1rem;
-    padding-left: 18rem;
     color:#490057;
 }
 
 .post-feed-header h1 {
-    width: 64%;
+    width: 80%;
     border-bottom: 1px solid #e2dada7e;
 }
 
-.postsByUser-container {
+/* .postsByUser-container {
     display: flex;
     flex-direction: column;
     gap: 2rem; 
     width: 60%; 
     align-items: center; 
     justify-content: center;
-}
+} */
 
 .postByUser {
     display: flex;
@@ -31,10 +34,11 @@
     justify-content: top;
     background-color: white;
     padding: 2rem; 
-    width: 60%; 
+    width: 80%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     border-radius: 8px; 
     transition: box-shadow 0.3s ease; 
+    margin-bottom: 2rem;
 }
 
 .postByUser-content {

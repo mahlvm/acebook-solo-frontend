@@ -90,13 +90,16 @@
 .capa {
     width: 100%; 
     position: relative;
+}
 
+.capacapa {
+    width: 100%;
 }
 
 .avatar {
     position: absolute; 
-    bottom: -80px; 
-    left: 10%; 
+    bottom: -115px; 
+    left: 11rem; 
     width: 150px; 
     height: 150px; 
     border-radius: 50%; 
@@ -111,7 +114,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: top;
-    padding-left: 63rem;
+    padding-left: 59rem;
+    padding-top: 0;
 }
 
 .profile-data{
@@ -121,7 +125,8 @@
 }
 
 .profile-update{
-    margin-left: 10rem;
+    padding-left: 3rem;
+
 }
 
 .profile-username {
@@ -167,8 +172,12 @@
 
 .feed-profile-friends{
     flex: 1;
+    padding-top: 7.2rem;
+    padding-left: 11rem;
 }
 
 .feed-profile-posts {
     flex: 2;
+    padding-left: 10rem;
+
 }

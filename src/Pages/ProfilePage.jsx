@@ -47,7 +47,7 @@ const ProfilePage = () => {
                 <div className="box-right-profile"> 
 
                     <div className='capa'>
-                        <img src={capa} alt="capa profile" />
+                        <img className="capacapa" src={capa} alt="capa profile" />
                         <img 
                             src={avatarUrl} 
                             alt="Avatar"
@@ -78,7 +78,7 @@ const ProfilePage = () => {
                             <FriendsByUser />
                         </div>
                         <div className='feed-profile-posts'>
-                            post
+    
                             <PostByUser/>
                         </div>
                     </div>
