@@ -1,8 +1,36 @@
-# React + Vite
+# Acebook: Facebook-like Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+The project is a Facebook-like application built using JavaScript and the MERN stack (MongoDB, Express, React, and Node.js).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Overview
+Project Type: Facebook-like Application
+Features: Account creation, login, profile, edit profile,  posting, delete post, commenting, delete comment liking, connecting with friends, feed that displays all posts and feed with posts by users.
+
+
+## Tech Stack
+
+For this app we will be using the following tech stack:
+- JavaScript, React, Node.js, Express, MongoDB, HTML, CSS, JWT.
+
+## Features
+
+- Account Creation
+- Login Page
+- Feed
+- Profile
+- Create and Delete Posts
+- Create and Delete Comments
+- Like posts and comments
+- Edit Profile informations
+- Conect with other users
+
+
+## Application
+
+|   Description    |   Page Image    |
+|:------------:|:----------------:|
+|Account Creation Page| ![](src/assets/Account.png)|
+|Login Page| ![](src/assets/Login.png)|
+|Feed Page| ![](src/assets/Feed.png)|
+|Profile| ![](src/assets/Profile.png)|
