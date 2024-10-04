@@ -32,7 +32,7 @@ const FeedPage = () => {
                     
                             <div className="li-icon">
                                 <i className="bi bi-door-open-fill"></i>
-                                <li><a onClick={logout}href="/">Logout</a></li>
+                                <li><a onClick={logout}href="/login">Logout</a></li>
                             </div>
                             
                         </ul>

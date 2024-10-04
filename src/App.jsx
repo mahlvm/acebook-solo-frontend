@@ -5,9 +5,9 @@ import LoginPage from './Pages/LoginPage'
 import TokenProvider from './providers/tokenProvider'
 import FeedPage from './Pages/FeedPage'
 import ProfilePage from './Pages/ProfilePage'
-import "@fontsource/quicksand"; // Importa a fonte padrão
-import "@fontsource/quicksand/400.css"; // Peso normal (400)
-import "@fontsource/quicksand/700.css"; // Peso 700
+import "@fontsource/quicksand"; 
+import "@fontsource/quicksand/400.css"; 
+import "@fontsource/quicksand/700.css"; 
 import UsersPage from './components/NewFriends'
 
 
